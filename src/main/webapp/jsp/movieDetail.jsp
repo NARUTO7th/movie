@@ -23,7 +23,7 @@
 
     <script src="${pageContext.request.contextPath}/static/layui/layui.js" charset="utf-8"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/layui/css/layui.css" media="all">
-    <title>鹰眼电影-详细</title>
+    <title>兔子电影-详细</title>
 </head>
 <body>
     <!-- ------------------------------------------------------------------- -->
@@ -221,7 +221,7 @@
         
             $.ajax({
                 type:'post',
-                url: url + "/movie/findMovieById",
+                url: "${pageContext.request.contextPath}/movie/findMovieById",
                 dataType:'json',
                 data: {
                     movie_id: movie_id
@@ -321,7 +321,7 @@
             var PictureUrl;
             $.ajax({
                 type:'post',
-                url: url + "/movie/findMovieById",
+                url: "${pageContext.request.contextPath}/movie/findMovieById",
                 dataType:'json',
                 data: {
                     movie_id: movie_id
@@ -338,7 +338,7 @@
                             "<ul class=\"celebrity-list clearfix\">" +
                                 "<li class=\"celebrity\">" +
                                     "<a class=\"portrait\">" +
-                                        "<img class=\"default-img\" alt=\"\" src=\"" + PictureUrl + "\">" +
+                                        "<img class=\"default-img\" alt=\"\" src=\"" +  PictureUrl +"\">"+
                                     "</a>" +
                                     "<div>" +
                                         "<a style=\"text-decoration: none;\" class=\"name\">" + obj.data.movie_director + "</a>" +
@@ -418,7 +418,7 @@
                                 console.log(comment_content);
                                 $.ajax({
                                     type:'post',
-                                    url: url + "/comment/addCommentByUser",
+                                    url: "${pageContext.request.contextPath}/comment/addCommentByUser",
                                     dataType:'json',
                                     data: {
                                         movie_id: movie_id,
@@ -462,7 +462,7 @@
                     ,function () {   
                         $.ajax({
                             type:'post',
-                            url: url + "/comment/deleteComemnt",
+                            url: "${pageContext.request.contextPath}/comment/deleteComemnt",
                             dataType:'json',
                             data: {
                                 comment_id: comment_id,
@@ -524,7 +524,7 @@
                             }else{
                                 $.ajax({
                                     type:'post',
-                                    url: url + "/comment/updateComment",
+                                    url: "${pageContext.request.contextPath}/comment/updateComment",
                                     dataType:'json',
                                     data: {
                                         comment_id: comment_id,

@@ -18,7 +18,7 @@
     <script src="${pageContext.request.contextPath}/static/js/Api.js"></script>
     <script src="${pageContext.request.contextPath}/static/layui/layui.js" charset="utf-8"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/layui/css/layui.css" media="all">
-    <title>鹰眼电影-支付</title>
+    <title>兔子电影-支付</title>
 </head>
 <body>
     <!-- ------------------------------------------------------------------- -->
@@ -116,7 +116,7 @@
             var price = json.price;
             $.ajax({
                 type:'post',
-                url: url + "/schedule/findScheduleById",
+                url: "${pageContext.request.contextPath}/schedule/findScheduleById",
                 dataType:'json',
                 data: {
                     schedule_id: schedule_id
@@ -188,7 +188,7 @@
             var price = json.price;
             $.ajax({
                 type: "post",
-                url: url + "/order/buyTickets",
+                url: "${pageContext.request.contextPath}/order/buyTickets",
                 data: {
                     schedule_id: schedule_id,
                     position: position,

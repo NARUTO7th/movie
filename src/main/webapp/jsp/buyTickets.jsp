@@ -23,7 +23,7 @@
 
     <script src="${pageContext.request.contextPath}/static/layui/layui.js" charset="utf-8"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/layui/css/layui.css" media="all">
-    <title>鹰眼电影-选影院</title>
+    <title>兔子电影-选影院</title>
 </head>
 <body>
     <!-- ------------------------------------------------------------------- -->
@@ -189,7 +189,7 @@
 
             $.ajax({
                 type:'post',
-                url: url + "/movie/findMovieById",
+                url: "${pageContext.request.contextPath}/movie/findMovieById",
                 dataType:'json',
                 data: {
                     movie_id: movie_id

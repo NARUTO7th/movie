@@ -94,7 +94,7 @@ body{
 .content .page .childpage .login_btn{
   width: 240px;
 }
-.content .page .childpage .login_page #UserName, #PassWord{
+.content .page .childpage .login_page #UserName,#PassWord,#UserName1,#PassWord1{
   width: 240px;
   height: 30px;
   border: none;
@@ -114,7 +114,7 @@ body{
 .content .page .childpage .register_page div{
   margin-top: 10px;
 }
-.content .page .childpage .register_page #UserName, #PassWord, #Email{
+.content .page .childpage .register_page #UserName,#PassWord,#UserName1,#PassWord1,#Email{
   width: 240px;
   height: 30px;
   border: none;
@@ -132,7 +132,7 @@ body{
   cursor: pointer;
   font-weight: bold;
   text-align: center;
-  color: red;
+  color: skyblue;
   margin-left: 20px;
   width: 88px;
   height: 30px;
@@ -158,11 +158,11 @@ body{
 }
 
 .screen .big_logo{
-  background-image: url("../images/logo_t.jpg");
+  background-image: url("../images/rabbit.png");
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 8px;
-	width: 200px;
-  height: 200px;
+	width: 160px;
+  height: 88px;
   background-repeat: no-repeat;
-  background-size: 200px auto;
+  background-size: contain;
 }

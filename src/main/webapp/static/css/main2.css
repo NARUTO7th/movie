@@ -65,7 +65,7 @@ line-height: 26px;
 }
 
     .ranking-top-right .ranking-top-wish,.textcolor_red {
-    color: #ef4238;
+    color: skyblue;
 }
 .ranking-top-right .ranking-top-wish{
 margin-top:12px;
@@ -81,7 +81,7 @@ font-size: 14px;
 }
 .ranking-index-2 .ranking-index,
 .ranking-index-3 .ranking-index{
-    color:#ef4238;
+    color:skyblue;
 }
 .ranking-item .ranking-index{
     display: inline-block;
@@ -107,7 +107,7 @@ font-size: 14px;
     font-size: 14px;
 }
 .ranking-num-info {
-    color:#ef4238;
+    color:skyblue;
 }
 
 /* 222 */
@@ -215,5 +215,5 @@ font-size: 14px;
     margin-top: 10px;
 }
 .ranking-index-2 ,.ranking-index-3{
-    color: #ef4238;
+    color: skyblue;
 }

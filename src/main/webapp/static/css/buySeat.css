@@ -39,11 +39,11 @@
     border-right: 150px solid #ffd8d7;
 }
 .container .order-progress-bar .done .step-num{
-    background-color: #f03d37;
+    background-color: skyblue;
 }
 .container .order-progress-bar .done .bar{
-    border-left: 150px solid #f03d37;
-    border-right: 150px solid #f03d37;
+    border-left: 150px solid skyblue;
+    border-right: 150px solid skyblue;
 }
 .container .order-progress-bar .step .step-next{
     font-size: 14px;
@@ -244,7 +244,7 @@
     margin-left: 2px;
 }
 .main .side .show-info .info-item .screen{
-    color: #f03d37;
+    color: skyblue;
 }
 .main .side .ticket-info{
     padding: 20px 0 10px;
@@ -271,7 +271,7 @@
     cursor: default;
     position: relative;
     font-size: 12px;
-    color: #f03d37;
+    color: skyblue;
     display: inline-block;
     width: 60px;
     height: 30px;
@@ -307,9 +307,9 @@
     position: relative;
     left: 50%;
     margin: 38px 0 0 -130px;
-    background-color: #f03d37;
-    -webkit-box-shadow: 0 2px 10px -2px #f03d37;
-    box-shadow: 0 2px 10px -2px #f03d37;
+    background-color: skyblue;
+    -webkit-box-shadow: 0 2px 10px -2px skyblue;
+    box-shadow: 0 2px 10px -2px skyblue;
 }
 .main .side .confirm-order .disable{
     cursor: default;

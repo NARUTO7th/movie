@@ -1,7 +1,7 @@
-<%@page import="com.entity.User"%>
+<%@page import="com.mos.entity.User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%--<%
+<%
 	User user = (User)request.getSession().getAttribute("user");
 	if(user == null){
 		response.sendRedirect("./mainPage.jsp");
@@ -10,7 +10,7 @@
             response.sendRedirect("./mainPage.jsp");
         }
     }
-%>--%>
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,7 +31,7 @@
     <script src="${pageContext.request.contextPath}/static/js/Api.js"></script>
     <script src="${pageContext.request.contextPath}/static/layui/layui.js" charset="utf-8"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/layui/css/layui.css" media="all">
-    <title>鹰眼电影-后台管理</title>
+    <title>兔子电影-后台管理</title>
 </head>
 <body>
     <!-- ------------------------------------------------------------------- -->
@@ -265,7 +265,7 @@
                         aArr[j].style.cssText = "background-color: #f4f3f4; color: #333;";
                     }
                     divArr[this.index].style.display = "block";
-                    aArr[this.index].style.cssText = "background-color: #ed3931; color: #fff;";
+                    aArr[this.index].style.cssText = "background-color: skyblue; color: #fff;";
                 }
             }
             for(var p=0;p<aArr.length;p++){
@@ -273,7 +273,7 @@
                 aArr[p].style.cssText = "background-color: #f4f3f4; color: #333;";
                 if(localStorage.getItem("cardId",this.index)==p){
                     divArr[p].style.display = "block";
-                    aArr[p].style.cssText = "background-color: #ed3931; color: #fff;";
+                    aArr[p].style.cssText = "background-color: skyblue; color: #fff;";
                 }
             }
         }
@@ -469,7 +469,7 @@
                             function () {
                                 $.ajax({
                                     type:'post',
-                                    url: url + "/user/updateUser",
+                                    url: "${pageContext.request.contextPath}/user/updateUser",
                                     dataType:'json',
                                     data: {
                                         user_id: data.user_id,
@@ -527,7 +527,7 @@
                                     else{
                                         $.ajax({
                                             type:'post',
-                                            url: url + "/user/register",
+                                            url: "${pageContext.request.contextPath}/user/register",
                                             dataType:'json',
                                             data: {
                                                 user_name: user_name,
@@ -590,7 +590,7 @@
 
             $.ajax({
                 type:'post',
-                url: url + "/movie/findAllMovies",
+                url: "${pageContext.request.contextPath}/movie/findAllMovies",
                 dataType:'json',
                 data: {},
                 success:function (obj) {
@@ -785,7 +785,7 @@
                             var StrActor,StrRole;            
                             $.ajax({
                                 type:'post',
-                                url: url + "/movie/findMovieById",
+                                url: "${pageContext.request.contextPath}/movie/findMovieById",
                                 dataType:'json',
                                 data: {
                                     movie_id: movie_id
@@ -859,7 +859,7 @@
                     function () {
                         $.ajax({
                             type:'post',
-                            url: url + "/movie/deleteMovie",
+                            url: "${pageContext.request.contextPath}/movie/deleteMovie",
                             dataType:'json',
                             data: {
                                 movie_id: movie_id,
@@ -986,7 +986,7 @@
                             function () {
                                 $.ajax({
                                     type:'post',
-                                    url: url + "",
+                                    url: "${pageContext.request.contextPath}",
                                     dataType:'json',
                                     data: {
                                         schedule_id: data.schedule_id,
@@ -1051,7 +1051,7 @@
                                         );
                                         // $.ajax({
                                         //     type:'post',
-                                        //     url: url + "",
+                                        //     url: "${pageContext.request.contextPath}",
                                         //     dataType:'json',
                                         //     data: {
                                         //         schedule_cinema:schedule_cinema,
@@ -1167,7 +1167,7 @@
                             function () {
                                 $.ajax({
                                     type:'post',
-                                    url: url + "/comment/updateComment",
+                                    url: "${pageContext.request.contextPath}/comment/updateComment",
                                     dataType:'json',
                                     data: {
                                         comment_id: data.comment_id,
@@ -1197,7 +1197,7 @@
                             function () {
                                 $.ajax({
                                     type:'post',
-                                    url: url + "/comment/deleteComemnt",
+                                    url: "${pageContext.request.contextPath}/comment/deleteComemnt",
                                     dataType:'json',
                                     data: {
                                         comment_id: data.comment_id,
@@ -1288,7 +1288,7 @@
                 var table = layui.table;
                 table.render({
                     elem: '#ticket_table_id'
-                    ,url: url + "/order/findAllOrdersPage"
+                    ,url: "${pageContext.request.contextPath}/order/findAllOrdersPage"
                     ,method: 'post'
                     ,toolbar: '#tickettoolbar'
                     ,title: '订单列表'
@@ -1301,7 +1301,7 @@
                         ,{field:'order_schedule',title:'电影',width:240,unresize:true,templet:'<div>{{d.order_schedule.schedule_movie.movie_cn_name}}</div>'}
                         ,{field:'order_schedule', title:'影厅', width:100, unresize: true, templet:'<div>{{d.order_schedule.schedule_hall.hall_name}}</div>'}
                         ,{field:'order_schedule',title:'影院',width:240,unresize:true,templet:'<div>{{d.order_schedule.schedule_hall.hall_cinema.cinema_name}}</div>'}
-                        ,{field:'order_state',title:'订单状态',width:100,unresize:true,align:'center',templet:function(d){if(d.order_state == 1) return '<div style="color:#337ab7">完成</div>';else if(d.order_state == 0) return '<div style="color:#ef4238">申请退票</div>';else return '<div style="color:#5cb85c">已退票</div>';}}
+                        ,{field:'order_state',title:'订单状态',width:100,unresize:true,align:'center',templet:function(d){if(d.order_state == 1) return '<div style="color:#337ab7">完成</div>';else if(d.order_state == 0) return '<div style="color:skyblue">申请退票</div>';else return '<div style="color:#5cb85c">已退票</div>';}}
                         ,{title:'操作', width:100, unresize: true, align:'center', toolbar: '#ticketbar'}
                     ]]
                     ,page: {layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'] //自定义分页布局
@@ -1335,7 +1335,7 @@
                             function () {
                                 $.ajax({
                                     type:'post',
-                                    url: url + "/order/agreeForRefund",
+                                    url: "${pageContext.request.contextPath}/order/agreeForRefund",
                                     dataType:'json',
                                     data: {
                                         order_id: data.order_id
@@ -1444,7 +1444,7 @@
                             PageStatus = 0;
                             table.render({
                                 elem: '#ticket_table_id'
-                                ,url: url + "/order/findAllOrdersPage"
+                                ,url: "${pageContext.request.contextPath}/order/findAllOrdersPage"
                                 ,method: 'post'
                                 ,toolbar: '#tickettoolbar'
                                 ,title: '订单列表'
@@ -1457,7 +1457,7 @@
                                     ,{field:'order_schedule',title:'电影',width:240,unresize:true,templet:'<div>{{d.order_schedule.schedule_movie.movie_cn_name}}</div>'}
                                     ,{field:'order_schedule', title:'影厅', width:100, unresize: true, templet:'<div>{{d.order_schedule.schedule_hall.hall_name}}</div>'}
                                     ,{field:'order_schedule',title:'影院',width:240,unresize:true,templet:'<div>{{d.order_schedule.schedule_hall.hall_cinema.cinema_name}}</div>'}
-                                    ,{field:'order_state',title:'订单状态',width:100,unresize:true,align:'center',templet:function(d){if(d.order_state == 1) return '<div style="color:#337ab7">完成</div>';else if(d.order_state == 0) return '<div style="color:#ef4238">申请退票</div>';else return '<div style="color:#5cb85c">已退票</div>';}}
+                                    ,{field:'order_state',title:'订单状态',width:100,unresize:true,align:'center',templet:function(d){if(d.order_state == 1) return '<div style="color:#337ab7">完成</div>';else if(d.order_state == 0) return '<div style="color:skyblue">申请退票</div>';else return '<div style="color:#5cb85c">已退票</div>';}}
                                     ,{title:'操作', width:100, unresize: true, align:'center', toolbar: '#ticketbar'}
                                 ]]
                                 ,page: {layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'] //自定义分页布局
@@ -1484,7 +1484,7 @@
                             PageStatus = 1;
                             table.render({
                                 elem: '#ticket_table_id'
-                                ,url: url + "/order/findAllRefundOrder"
+                                ,url: "${pageContext.request.contextPath}/order/findAllRefundOrder"
                                 ,method: 'post'
                                 ,toolbar: '#tickettoolbar'
                                 ,title: '订单列表'
@@ -1497,7 +1497,7 @@
                                     ,{field:'order_schedule',title:'电影',width:240,unresize:true,templet:'<div>{{d.order_schedule.schedule_movie.movie_cn_name}}</div>'}
                                     ,{field:'order_schedule', title:'影厅', width:100, unresize: true, templet:'<div>{{d.order_schedule.schedule_hall.hall_name}}</div>'}
                                     ,{field:'order_schedule',title:'影院',width:240,unresize:true,templet:'<div>{{d.order_schedule.schedule_hall.hall_cinema.cinema_name}}</div>'}
-                                    ,{field:'order_state',title:'订单状态',width:100,unresize:true,align:'center',templet:function(d){if(d.order_state == 1) return '<div style="color:#337ab7">完成</div>';else if(d.order_state == 0) return '<div style="color:#ef4238">申请退票</div>';else return '<div style="color:#5cb85c">已退票</div>';}}
+                                    ,{field:'order_state',title:'订单状态',width:100,unresize:true,align:'center',templet:function(d){if(d.order_state == 1) return '<div style="color:#337ab7">完成</div>';else if(d.order_state == 0) return '<div style="color:skyblue">申请退票</div>';else return '<div style="color:#5cb85c">已退票</div>';}}
                                     ,{title:'操作', width:200, unresize: true, align:'center', toolbar: '#backticketbar'}
                                 ]]
                                 ,page: {layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'] //自定义分页布局
@@ -1583,7 +1583,7 @@
                             function () {
                                 $.ajax({
                                     type:'post',
-                                    url: url + "/schedule/offlineSchedule",
+                                    url: "${pageContext.request.contextPath}/schedule/offlineSchedule",
                                     dataType:'json',
                                     data: {
                                         schedule_id: data.schedule_id,
@@ -1643,7 +1643,7 @@
                                     else{
                                         $.ajax({
                                             type:'post',
-                                            url: url + "/schedule/addSchedule",
+                                            url: "${pageContext.request.contextPath}/schedule/addSchedule",
                                             dataType:'json',
                                             data: {
                                                 movie_name: select_movie_name,
@@ -1691,7 +1691,7 @@
                                     });
                                     $.ajax({
                                         type:'post',
-                                        url: url + "/schedule/findAllSchedule",
+                                        url: "${pageContext.request.contextPath}/schedule/findAllSchedule",
                                         dataType:'json',
                                         data: {},
                                         success:function (objs) {
@@ -1732,7 +1732,7 @@
                             //上映
                             if(ScheduleStatus==0){
                                 table.reload('schedule_table_id', {
-                                    url: url + "/schedule/findScheduleByMovieName"
+                                    url: "${pageContext.request.contextPath}/schedule/findScheduleByMovieName"
                                     ,method: "POST"
                                     ,where: {
                                         movie_name: find_temp
@@ -1745,7 +1745,7 @@
                             //下架
                             else{
                                 table.reload('schedule_table_id', {
-                                    url: url + "/schedule/findOffScheduleByMovieName"
+                                    url: "${pageContext.request.contextPath}/schedule/findOffScheduleByMovieName"
                                     ,method: "POST"
                                     ,where: {
                                         movie_name: find_temp
@@ -1867,7 +1867,7 @@
         function initBoxOffice(){
             $.ajax({
                 type:'post',
-                url: url + "/movie/findAllMovies",
+                url: "${pageContext.request.contextPath}/movie/findAllMovies",
                 dataType:'json',
                 data: {},
                 //获取数据  根据类型：统计票房   type:['喜剧','动作','爱情','动画','科幻','惊悚','冒险','犯罪','悬疑'] typeIncome: []  场次管理接口 下架之后数据更新    //头像为null时 默认设置为某一张 

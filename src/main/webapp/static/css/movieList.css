@@ -14,7 +14,7 @@
 	    list-style-type: none;
 	}
 	.tags li.active {
-	    background: #f34d41;
+	    background: skyblue;
 	    color: #fff;
 	}
 	.tags li.active a {
@@ -88,6 +88,7 @@
 	    width: 20px;
 	    height: 20px;
 	    margin-right: 2px;
+		background-size: cover;
 	}
 	.sort-control-label {
 	    font-size: 14px;
@@ -108,7 +109,7 @@
 	    position: relative;
 	}
 	.channel-action-sale {
-    	background-color: #f34d41;
+    	background-color: skyblue;
 	}
 	.channel-action {
 	    position: absolute;

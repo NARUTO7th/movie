@@ -20,7 +20,7 @@
 
     <script src="${pageContext.request.contextPath}/static/layui/layui.js" charset="utf-8"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/layui/css/layui.css" media="all">
-    <title>鹰眼电影-选位置</title>
+    <title>兔子电影-选位置</title>
 </head>
 <body>
     <!-- ------------------------------------------------------------------- -->
@@ -199,7 +199,7 @@
             var showInfo = $(".show-info");
             $.ajax({
                 type:'post',
-                url: url + "/schedule/findScheduleById",
+                url: "${pageContext.request.contextPath}/schedule/findScheduleById",
                 dataType:'json',
                 data: {
                     schedule_id: schedule_id

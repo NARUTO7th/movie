@@ -27,7 +27,7 @@
 }
 .container .contents .nav-next .active{
 	color: #fff;
-	background-color: #ed3931;
+	background-color: skyblue;
 }
 
 .container .contents .nav-body{
@@ -45,7 +45,7 @@
 }
 .container .contents .nav-body .one .title{
 	font-size: 18px;
-	color: #ec443f;
+	color: skyblue;
 	padding: 26px 0;
 }
 .container .contents .nav-body .one hr{
@@ -114,7 +114,7 @@
 }
 .container .contents .nav-body .one .order-box .order-body .order-content .show-time{
 	font-size: 12px;
-    color: #f03d37;
+    color: skyblue;
 }
 .container .contents .nav-body .one .order-box .order-body .order-price{
 	float: left;
@@ -148,7 +148,7 @@
 
 .container .contents .nav-body .two .title{
 	font-size: 18px;
-	color: #ec443f;
+	color: skyblue;
 	padding: 26px 0;
 }
 .container .contents .nav-body .two hr{
@@ -244,7 +244,7 @@
     font-size: 18px;
     line-height: 40px;
     border: none;
-    background-color: #ed3931;
+    background-color: skyblue;
 	padding: 0;
 	text-align: center;
 }
@@ -254,7 +254,7 @@
 
 .container .contents .nav-body .three .title{
 	font-size: 18px;
-	color: #ec443f;
+	color: skyblue;
 	padding: 26px 0;
 }
 .container .contents .nav-body .three hr{
@@ -300,7 +300,7 @@
     font-size: 18px;
     line-height: 40px;
     border: none;
-    background-color: #ed3931;
+    background-color: skyblue;
 	padding: 0;
 	text-align: center;
 }

@@ -8,8 +8,8 @@
     	border-bottom: 2px solid #eee;
 	}
 	.tab-container .tab-title-container .tab-title.active {
-	    color: #ef4238;
-	    border-bottom-color: #ef4238;
+	    color: skyblue;
+	    border-bottom-color: skyblue;
 	}
 	.tab-container .tab-title-container .tab-title {
 	    cursor: pointer;
@@ -57,7 +57,7 @@
 	    width: 4px;
 	    height: 18px;
 	    margin-right: 6px;
-	    background-color: #ef4238;
+	    background-color: skyblue;
 	}
 	.module .mod-content {
 	    margin-top: 20px;
@@ -253,16 +253,16 @@
 	    height: 30px;
 	    padding: 0 10px;
 	    border-radius: 15px;
-	    border: 1px solid #ef4238;
+	    border: 1px solid skyblue;
 	    text-align: center;
 	    font-size: 14px;
 	    line-height: 30px;
-	    color: #ef4238;
+	    color: skyblue;
 	}
 	.comment-entry:hover {
 		text-decoration: none;
 		color: #fff;
-		background-color: #ef4238;
+		background-color: skyblue;
 	}
 	.deleteCom{
 		cursor: pointer;
@@ -270,16 +270,16 @@
 		width: 67px;
 		padding: 6 10px;
 		border-radius: 15px;
-		border: 1px solid #ef4238;
+		border: 1px solid skyblue;
 		text-align: center;
 		font-size: 14px;
 		line-height: 30px;
-		color: #ef4238;
+		color: skyblue;
 		margin-left: 80px;
 	}
 	.deleteCom:hover{
-		border: 1px solid #ef4238;
-		background-color: #ef4238;
+		border: 1px solid skyblue;
+		background-color: skyblue;
 		color: #fff;
 		text-decoration: none;
 	}

@@ -20,7 +20,7 @@
 
     <script src="${pageContext.request.contextPath}/static/layui/layui.js" charset="utf-8"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/layui/css/layui.css" media="all">
-    <title>鹰眼电影-首页</title>
+    <title>兔子电影-首页</title>
 </head>
 <body>
 <!-- ------------------------------------------------------------------- -->
@@ -296,7 +296,8 @@
 
         $.ajax({
             type:'post',
-            url: url + "/movie/findAllMovies",
+            /*url: "${pageContext.request.contextPath}/movie/findAllMovies",*/
+            url: "${pageContext.request.contextPath}/movie/findAllMovies",
             dataType:'json',
             data: {},
             success:function (obj) {
@@ -324,7 +325,7 @@
                         "</div>" +
                         "</a>" +
                         "<div class=\"movie-detail movie-detail-strong movie-sale\">" +
-                        "<a href=\"./jsp/buyTickets.jsp?movie_id=" + obj.data[i].movie_id + "\" class=\"active\" target=\"_blank\" data-act=\"salePlayingMovie-click\" data-val=\"{movieid:42964}\">购 票</a>" +
+                        "<a href=\"./buyTickets.jsp?movie_id=" + obj.data[i].movie_id + "\" class=\"active\" target=\"_blank\" data-act=\"salePlayingMovie-click\" data-val=\"{movieid:42964}\">购 票</a>" +
                         "</div>" +
                         "</div>" +
                         "</li>";
@@ -396,7 +397,7 @@
             if(i==0){
                 BoxOffice.append(
                     "<li class=\"ranking-item ranking-top ranking-index-1\">" +
-                    "<a href=\"./jsp/movieDetail.jsp?movie_id=" + obj.sort[i].movie_id + "\" target=\"_blank\">" +
+                    "<a href=\"./movieDetail.jsp?movie_id=" + obj.sort[i].movie_id + "\" target=\"_blank\">" +
                     "<div class=\"ranking-top-left\">" +
                     "<i class=\"ranking-top-icon\"></i>" +
                     "<img class=\"ranking-imgs  default-img\" src=\"" + obj.sort[i].movie_picture + "\">" +
@@ -417,7 +418,7 @@
             else{
                 BoxOffice.append(
                     "<li class=\"ranking-item ranking-index-4\">" +
-                    "<a href=\"./jsp/movieDetail.jsp?movie_id=" + obj.sort[i].movie_id + "\" target=\"_blank\">" +
+                    "<a href=\"./movieDetail.jsp?movie_id=" + obj.sort[i].movie_id + "\" target=\"_blank\">" +
                     "<span class=\"normal-link\">" +
                     "<i class=\"ranking-index ranking-index-"+(i+1)+"\">" + (i+1) + "</i>" +
                     "<span class=\"ranking-movie-name\">" + obj.sort[i].movie_cn_name + "</span>" +

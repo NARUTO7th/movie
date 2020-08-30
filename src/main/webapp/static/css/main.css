@@ -54,7 +54,7 @@
 	
 }
 .textcolor_red {
-	color: #ef4238!important;
+	color: skyblue!important;
 }
 .textcolor_blue{
 	color: #2d98f3!important;
@@ -125,11 +125,11 @@
 }
 .movie-detail a:hover{
 	text-decoration: none;
-	background: #ef4238;
+	background: skyblue;
 	color: #fff;
 }
 .movie-sale .active {
-	color: #ef4238;
+	color: skyblue;
 }
 .movie-sale a {
 	display: block;
@@ -196,16 +196,16 @@
 	text-decoration: none;
 }
 .tags-line a:hover{
-	color: #f34d41;
+	color: skyblue;
 }
 .list-pager a{
 	text-decoration: none;
 }
 .list-pager li:hover{
-	border: 1px solid #f34d41;
+	border: 1px solid skyblue;
 }
 .list-pager .active{
-	background: #f34d41;
+	background: skyblue;
     color: #fff;
 }
 .main-detail{

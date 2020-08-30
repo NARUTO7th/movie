@@ -17,7 +17,7 @@
 
     <script src="${pageContext.request.contextPath}/static/layui/layui.js" charset="utf-8"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/layui/css/layui.css" media="all">
-    <title>鹰眼电影</title>
+    <title>兔子电影</title>
 </head>
 <body>
  	<!-- 导航栏 -->
@@ -31,12 +31,12 @@
                     <ul>
                         <li><a href="${pageContext.request.contextPath}/jsp/mainPage.jsp">首页</a></li>
                         <li class="active"><a href="${pageContext.request.contextPath}/jsp/movieList.jsp">电影</a></li>
-                        <li><a href="${pageContext.request.contextPath}/jsp/manage.jsp">影院</a></li>
+                        <li><a href="javascript:void(0)">影院</a></li>
                         <li><a href="javascript:void(0)">榜单</a></li>
                     </ul>
                 </div>
-                <div class="app-download">
-                </div>
+<%--                <div class="app-download">--%>
+<%--                </div>--%>
                 <div class="user-info">
                 <div class="user-avatar J-login">
                     <ul class="layui-nav" style="background-color: #fff;">

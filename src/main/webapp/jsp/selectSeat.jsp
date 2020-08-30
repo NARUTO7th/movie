@@ -22,7 +22,7 @@
     <script src="${pageContext.request.contextPath}/static/js/Api.js"></script>
     <script src="${pageContext.request.contextPath}/static/layui/layui.js" charset="utf-8"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/layui/css/layui.css" media="all">
-    <title>鹰眼电影-选场次</title>
+    <title>兔子电影-选场次</title>
 </head>
 <body>
     <!-- ------------------------------------------------------------------- -->
@@ -124,7 +124,7 @@
             var avatarShadow = $(".avatar-shadow");
             $.ajax({
                 type:'post',
-                url: url + "/schedule/findScheduleByCinemaAndMovie",
+                url: "${pageContext.request.contextPath}/schedule/findScheduleByCinemaAndMovie",
                 dataType:'json',
                 data: {
                     movie_id: movie_id,

@@ -1,12 +1,12 @@
-<%@page import="com.entity.User"%>
+<%@page import="com.mos.entity.User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%--<%
+<%
 	User user = (User)request.getSession().getAttribute("user");
 	if(user == null){
 		response.sendRedirect("./login.jsp");
 	}
-%>--%>
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +25,7 @@
     <script src="${pageContext.request.contextPath}/static/js/Api.js"></script>
     <script src="${pageContext.request.contextPath}/static/layui/layui.js" charset="utf-8"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/layui/css/layui.css" media="all">
-    <title>鹰眼电影-个人中心</title>
+    <title>兔子电影-个人中心</title>
 </head>
 <body>
     <!-- ------------------------------------------------------------------- -->
@@ -123,7 +123,7 @@
                         aArr[j].style.cssText = "background-color: #f4f3f4; color: #333;";
                     }
                     divArr[this.index].style.display = "block";
-                    aArr[this.index].style.cssText = "background-color: #ed3931; color: #fff;";
+                    aArr[this.index].style.cssText = "background-color: skyblue; color: #fff;";
                 }
             }
             for(var p=0;p<aArr.length;p++){
@@ -131,7 +131,7 @@
                 aArr[p].style.cssText = "background-color: #f4f3f4; color: #333;";
                 if(localStorage.getItem("usercardId")==p){
                     divArr[p].style.display = "block";
-                    aArr[p].style.cssText = "background-color: #ed3931; color: #fff;";
+                    aArr[p].style.cssText = "background-color: skyblue; color: #fff;";
                 }
             }
         }
@@ -144,7 +144,7 @@
             var html;
             $.ajax({
                 type:'post',
-                url: url + "/order/findOrderByUserName",
+                url: "${pageContext.request.contextPath}/order/findOrderByUserName",
                 dataType:'json',
                 data: {
                     user_name: user.user_name
@@ -238,7 +238,7 @@
                             function (){
                                 $.ajax({
                                     type:'post',
-                                    url: url + "/order/applyForRefund",
+                                    url: "${pageContext.request.contextPath}/order/applyForRefund",
                                     dataType:'json',
                                     data: {
                                         order_id: order_id
@@ -357,7 +357,7 @@
                 formData.append("file",file);
                 $.ajax({
                     type:'post',
-                    url: url + "/user/uploadHeadImg",
+                    url: "${pageContext.request.contextPath}/user/uploadHeadImg",
                    // dataType:'json',
                     data: formData,
                     processData: false,
@@ -453,7 +453,7 @@
             else{
                 $.ajax({
                     type:'post',
-                    url: url + "/user/modifyUserPwd",
+                    url: "${pageContext.request.contextPath}/user/modifyUserPwd",
                     dataType:'json',
                     data: {
                         oldPwd: user_old_password,

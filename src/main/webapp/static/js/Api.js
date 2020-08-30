@@ -1,5 +1,11 @@
-var urlHead = "http:///edy45u.";
+// var urlHead = "http:///edy45u.";
+//
+// var urlFoot = "natappfree.cc";
+//
+// var url = urlHead.toString() + urlFoot.toString();
 
-var urlFoot = "natappfree.cc";
+var urlHead = "..";
 
-var url = urlHead.toString() + urlFoot.toString();
+
+
+var url = urlHead.toString()

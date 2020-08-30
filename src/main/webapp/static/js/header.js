@@ -20,7 +20,7 @@ function init_comment(){
     if(user == null){
         $.ajax({
             type:'post',
-            url: url + "/movie/findMovieById",
+            url: "../movie/findMovieById",
             dataType:'json',
             data: {
                 movie_id: movie_id
@@ -64,7 +64,7 @@ function init_comment(){
         var html;
         $.ajax({
             type:'post',
-            url: url + "/movie/findMovieById",
+            url: "../movie/findMovieById",
             dataType:'json',
             data: {
                 movie_id: movie_id
@@ -173,7 +173,7 @@ function ReLogin(){
             function (){
                 $.ajax({
                     type:'post',
-                    url: url + "/user/logout",
+                    url: "../user/logout",
                     dataType:'json',
                     data: {},
                     success:function (obj) {

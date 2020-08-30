@@ -25,7 +25,7 @@
 	height: 80px;
 }
 .header .header-inner .logo{
-	background-image: url("../images/logo_h.jpg");
+	background-image: url("../images/rabbit.png");
 	display: block;
 	float: left;
 	width: 150px;
@@ -63,7 +63,7 @@
 }
 .header .nav ul li a:hover{
 	color: #fff;
-	background-color: #ef4238;
+	background-color: skyblue;
 }
 .header .app-download{
 	float: left;
@@ -100,7 +100,7 @@
 	top: 0;
 	height: 40px;
 	width: 40px;
-	background-color: #ef4238;
+	background-color: skyblue;
 	border-radius: 30px;
 	background-image: url("../images/search.jpg");
 	cursor: pointer;
@@ -199,7 +199,7 @@
 	text-align: center;
 }
 .fu-nav .layui-this a{
-	color: #ef4238 !important;
+	color: skyblue !important;
 }
 .fu-nav li{
 	width: 144px;

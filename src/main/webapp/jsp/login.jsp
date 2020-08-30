@@ -16,16 +16,16 @@
     <link href="${pageContext.request.contextPath}/static/css/login.css" rel="stylesheet">
 
     <script></script>
-    <title>鹰眼电影-登录注册</title>
+    <title>兔子电影-登录注册</title>
 </head>
 <body>
 
     <!-- ------------------------------------------------------------------- -->
     <div class="screen">
         <img class="big_logo"><br/>
-        <label class="title">鹰 眼 电 影</label><br/>
-        <label class="ineer_one">回首向来风雨茶香里</label><br/>
-        <label class="ineer_two">眸中一点可是思念谁</label>
+        <label class="title">兔 子 电 影</label><br/>
+        <label class="ineer_one">后 浪</label><br/>
+        <label class="ineer_two">韭 菜</label>
     </div>
     <!-- 登录页 -->
     <div class="content" style="float: left;">
@@ -56,7 +56,7 @@
                     <input type="button" value="登录" class="btn btn-success login_btn" onclick="loginbtn()"/>
                 </div>
                 <div>
-                    <label class="login_version">@版权所有</label>
+                    <label class="login_version"></label>
                 </div>
             </div>
             <!-- 注册界面 -->
@@ -67,11 +67,11 @@
                 <div class="register_page">
                     <div>
                         <label>帐号</label><br/>
-                        <input id="UserName" type="text"/>
+                        <input id="UserName1" type="text"/>
                     </div>
                     <div>
                         <label>密码</label><br/>
-                        <input id="PassWord" type="password"/>
+                        <input id="PassWord1" type="password"/>
                     </div>
                     <div>
                         <label>邮箱</label><br/>
@@ -122,15 +122,15 @@
             screen.style.cssText = "margin:" + (content.clientHeight - screen.clientHeight)/2 +"px " + 
             (clientWidth*4/7 - screen.clientWidth)/2 + "px " +
             (content.clientHeight - screen.clientHeight)/2 + "px;";
-            setInterval(function(){
-                colorNum += middle;
-                if(colorNum>185){
-                    middle = -3;
-                }else if(colorNum<80){
-                    middle = 3;
-                }
-                title.style.cssText = "color:rgb(255," + colorNum + ", 0)";
-            },30);
+            // setInterval(function(){
+            //     colorNum += middle;
+            //     if(colorNum>185){
+            //         middle = -3;
+            //     }else if(colorNum<80){
+            //         middle = 3;
+            //     }
+            //     title.style.cssText = "color:rgb(255," + colorNum + ", 0)";
+            // },30);
         }
 
         //初始化登录界面
@@ -179,7 +179,7 @@
                 login_error.text("");
                 $.ajax({
                     type: "post",
-                    url: url + "/user/login",
+                    url: "${pageContext.request.contextPath}/user/login",
                     data: {
                         user_name: user_name,
                         user_pwd: user_pwd
@@ -206,8 +206,8 @@
         //注册账号和密码逻信息验证
         function registerbtn(){
             var textNum = document.getElementById('TestNum'); 
-            var user_name = $(".register_page").find("#UserName").val();
-            var user_pwd = $(".register_page").find("#PassWord").val();
+            var user_name = $(".register_page").find("#UserName1").val();
+            var user_pwd = $(".register_page").find("#PassWord1").val();
             var user_email = $(".register_page").find("#Email").val();
             var register_error = $(".register_error");
             var test = $("#Test").val();
@@ -224,7 +224,7 @@
                 register_error.text("");
                 $.ajax({
                     type: "post",
-                    url: url + "/user/register",
+                    url: "${pageContext.request.contextPath}/user/register",
                     data: {
                         user_name: user_name,
                         user_pwd: user_pwd,

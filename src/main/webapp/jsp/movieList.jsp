@@ -20,7 +20,7 @@
 
     <script src="${pageContext.request.contextPath}/static/layui/layui.js" charset="utf-8"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/layui/css/layui.css" media="all">
-    <title>鹰眼电影-电影</title>
+    <title>兔子电影-电影</title>
 </head>
 <body>
     <!-- ------------------------------------------------------------------- -->
@@ -50,16 +50,16 @@
                             <ul class="tags tags-type">
                             </ul>
                         </li>
-                        <li class="tags-line tags-line-border">
-                            <div class="tags-title">区域 :</div>
-                            <ul class="tags tags-area">
-                            </ul>
-                        </li>
-                        <li class="tags-line tags-line-border">
-                            <div class="tags-title">年代 :</div>
-                            <ul class="tags tags-year">
-                            </ul>
-                        </li>
+<%--                        <li class="tags-line tags-line-border">--%>
+<%--                            <div class="tags-title">区域 :</div>--%>
+<%--                            <ul class="tags tags-area">--%>
+<%--                            </ul>--%>
+<%--                        </li>--%>
+<%--                        <li class="tags-line tags-line-border">--%>
+<%--                            <div class="tags-title">年代 :</div>--%>
+<%--                            <ul class="tags tags-year">--%>
+<%--                            </ul>--%>
+<%--                        </li>--%>
                     </ul>
                 </div>
             </div>
@@ -132,7 +132,7 @@
             if(getUrlParams("type") == "全部" || getUrlParams("type") == null){
                 $.ajax({
                     type: "post",
-                    url: url + "/movie/sortAllMovies",
+                    url: "${pageContext.request.contextPath}/movie/sortAllMovies",
                     data: {order: order},
                     dataType: "json",
                     success: function(obj){
@@ -155,7 +155,7 @@
             }else{
                 $.ajax({
                     type: "post",
-                    url: url + "/movie/findMoviesByType",
+                    url: "${pageContext.request.contextPath}/movie/findMoviesByType",
                     data: {type: type},
                     dataType: "json",
                     success:function(obj){
@@ -210,7 +210,7 @@
                     $('.movie-list').remove();
                     $.ajax({
                     type: "post",
-                    url: url + "/movie/sortAllMovies",
+                    url: "${pageContext.request.contextPath}/movie/sortAllMovies",
                     data: {order: order},
                     dataType: "json",
                     success: function(obj){

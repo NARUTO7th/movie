@@ -7,7 +7,7 @@
 <body>
     <div class="footer">
         <div>
-            <p>鹰眼电影网上购票系统</p>
+            <p>兔子电影网上购票系统</p>
             <p>
                友情链接:
                 <a href="https://maoyan.com/" target="_blank" style="margin-right:30px;">猫眼电影</a>
@@ -41,7 +41,7 @@
                     ,moveType: 0 //拖拽模式，0或者1
                     ,content: 
                         "<div style=\"text-align: center; margin: 20px 0 10px 0;\">" +
-                            "<img src=\"${pageContext.request.contextPath}/static/images/美女客服.jpg\" style=\"width:320px;\">" +
+                            "<img src=\"${pageContext.request.contextPath}/static/images/ddd.JPG\" style=\"width:320px;\">" +
                         "</div>"
                 });
             });

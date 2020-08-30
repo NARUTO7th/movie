@@ -27,7 +27,7 @@
 }
 .container .contents .nav-next .active{
 	color: #fff;
-	background-color: #ed3931;
+	background-color: skyblue;
 }
 
 .container .contents .nav-body{
@@ -44,7 +44,7 @@
 }
 .container .contents .nav-body .title{
 	font-size: 18px;
-	color: #ec443f;
+	color: skyblue;
 	padding: 26px 0;
 }
 .container .contents .nav-body hr{
@@ -145,7 +145,7 @@
 }
 .container .two .movies-detail a:hover{
 	text-decoration: none;
-	background: #ef4238;
+	background: skyblue;
 	color: #fff;
 }
 .textside{
